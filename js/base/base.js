@@ -421,3 +421,27 @@ function verbose_alert(short_message, verbose_message) {
         alert(short_message);
     }
 }
+
+
+function get_normal_path(path){
+
+     var normal_path = '';
+
+     jQuery.ajax({
+        url: location.protocol + '//' + location.host + '/islandora_web_annotations/normal_path',
+        dataType: 'text',
+        type: 'GET',
+        async: false,
+        data: {data_url : path},
+        error: function() {
+            var msg = "Error in get_normal_path";
+            verbose_alert(msg, msg);
+        },
+        success: function(data) {
+            normal_path = data;
+        }
+    });
+
+    return normal_path;
+
+}

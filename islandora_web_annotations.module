@@ -98,6 +98,17 @@ function islandora_web_annotations_menu() {
   );
   // End: Video related routes
 
+  $items['islandora_web_annotations/normal_path'] = array(
+      'title' => 'Get non-aliased Drupal path',
+      'description' => 'Get non-aliased Drupal path to object',
+      'page callback' => 'islandora_web_annotations_normal_path',
+      'type' => MENU_CALLBACK,
+      'file' => 'includes/AnnotationController.php',
+      'access callback' => TRUE, // TRUE will give access to everyone.
+      'access arguments' => array(ISLANDORA_WEB_ANNOTATION_VIEW),
+  );
+
+
   return $items;
 }
 

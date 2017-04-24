@@ -43,6 +43,8 @@ jQuery(document).ready(function() {
 
     executeCommonLoadOperations();
 
+
+
 });
 
 
@@ -92,7 +94,10 @@ function getAnnotationsBasicImage() {
 }
 
 function getBasicImagePID() {
+
     var objectURL = window.location.href;
+    // get the (un-aliased) relative URL.
+    objectURL = get_normal_path(objectURL);
     var objectPID = objectURL.substr(objectURL.lastIndexOf('/') + 1);
     objectPID = objectPID.replace("%3A", ":");
     objectPID = objectPID.replace("#", "");
