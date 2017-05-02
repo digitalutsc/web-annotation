@@ -221,3 +221,23 @@ function deleteAnnotation(){
     drupal_json_output($output);
     drupal_exit();
 }
+
+/**
+ * Menu callback normal_path - returns URL passed t.
+ */
+function islandora_web_annotations_normal_path(){
+  if(isset($_GET['data_url'])){
+    $full_path = $_GET['data_url'];
+    $path = parse_url($full_path)['path'];
+
+    // Trim left directory separator as this will change the result
+    // of drupal_lookup_path
+    $path = ltrim($path,'/');
+    echo drupal_lookup_path('source', $path);
+
+  }
+  else {
+    echo 'GET VAR not set.';
+  }
+  drupal_exit();
+}
