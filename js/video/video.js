@@ -106,6 +106,7 @@ jQuery(document).ready(function() {
         // Remove the list items which contain default permission checkboxes
         // from the Open Video Annotation editor.  We do not use these.
         jQuery('li.annotator-checkbox').remove();
+        // issue-174
         jQuery(".mce-i-rubric").parent().hide();
 
         if(jQuery(".islandora-oralhistories-object").length > 0){
