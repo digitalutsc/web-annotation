@@ -10,7 +10,7 @@
 function islandora_web_annotations_views_default_views() {
 
     $view = new view();
-    $view->name = 'islandora_web_annotation_block_video_js';
+    $view->name = 'islandora_web_annotation_block_audio_video';
     $view->description = '';
     $view->tag = 'islandora_web_annotations';
     $view->base_table = 'islandora_solr';
@@ -90,21 +90,24 @@ function islandora_web_annotations_views_default_views() {
     $handler = $view->new_display('block', 'Block', 'islandora_annotations_audio_video');
 
 
+    $views['islandora_web_annotation_block_audio_video'] = $view;
+
+
 
 
     $view = new view();
-    $view->name = 'islandora_web_annotation_block_images_page';
+    $view->name = 'islandora_web_annotation_block_image_page';
     $view->description = '';
     $view->tag = 'islandora_web_annotations';
     $view->base_table = 'islandora_solr';
-    $view->human_name = 'Islandora Web Annotation Block - Images, Page';
+    $view->human_name = 'Islandora Web Annotation Block - Image, Page';
     $view->core = 7;
     $view->api_version = '3.0';
     $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
     /* Display: Master */
     $handler = $view->new_display('default', 'Master', 'default');
-    $handler->display->display_options['title'] = 'Islandora Web Annotation Block - Images, Page';
+    $handler->display->display_options['title'] = 'Islandora Web Annotation Block - Image, Page';
     $handler->display->display_options['use_more_always'] = FALSE;
     $handler->display->display_options['access']['type'] = 'none';
     $handler->display->display_options['cache']['type'] = 'none';
@@ -141,11 +144,11 @@ function islandora_web_annotations_views_default_views() {
     $handler->display->display_options['arguments']['annotation_parent']['summary_options']['items_per_page'] = '25';
 
     /* Display: Block */
-    $handler = $view->new_display('block', 'Block', 'islandora_annotations_images_pages');
+    $handler = $view->new_display('block', 'Block', 'islandora_annotations_image_page');
 
 
 
-    $views['islandora_web_annotations'] = $view;
+    $views['islandora_web_annotation_block_image_page'] = $view;
 
   return $views;
 }
