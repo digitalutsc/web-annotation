@@ -10,6 +10,6 @@
  * Implements hook_views_data().
  */
 function islandora_web_annotations_views_data_alter() {
-    $data['islandora_solr']['annotation_value']['field']['handler'] = 'islandora_web_annotations_handler_htmlrender';
+    $data['islandora_solr']['annotation_value']['field']['handler'] = 'views_handler_field';
     return $data;
 }
