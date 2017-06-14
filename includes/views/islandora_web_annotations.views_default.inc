@@ -92,10 +92,8 @@ function islandora_web_annotations_views_default_views() {
 
 
 
-
-
     $view = new view();
-    $view->name = 'islandora_web_annotations';
+    $view->name = 'islandora_web_annotation_block_images_page';
     $view->description = '';
     $view->tag = 'islandora_web_annotations';
     $view->base_table = 'islandora_solr';

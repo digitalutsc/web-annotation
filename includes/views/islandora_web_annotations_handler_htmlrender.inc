@@ -11,6 +11,3 @@ class islandora_web_annotations_handler_htmlrender extends views_handler_field {
         return $value;
     }
 }
-/**
- * Provides a field which will display a link to edit the node if any other listed fields are empty.
- */
