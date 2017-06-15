@@ -147,25 +147,6 @@ function islandora_web_annotations_views_api() {
 }
 
 
-/**
- * Implementation of hook_views_handlers().
- * For the Solr Views Annotation Block
- */
-function islandora_web_annotations_views_handlers() {
-  return array(
-      'info' => array(
-          'path' => drupal_get_path('module', 'islandora_web_annotations') . '/includes/views',
-      ),
-      'handlers' => array(
-          'islandora_web_annotations_handler_htmlrender' => array(
-              'parent' => 'views_handler_field',
-          ),
-      ),
-  );
-}
-
-
-
 
 /**
  * Send user access related information to js for access control

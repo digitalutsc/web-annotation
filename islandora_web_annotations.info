@@ -9,3 +9,4 @@ dependencies[] = context_ui
 dependencies[] = islandora_context
 files[] = islandora_web_annotations.module
 files[] = tests/islandora_annotations_ingest_purge.test
+files[] = includes/views/islandora_web_annotations_handler_htmlrender.inc

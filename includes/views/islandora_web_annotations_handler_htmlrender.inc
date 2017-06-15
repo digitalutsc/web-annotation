@@ -7,7 +7,7 @@
 
 class islandora_web_annotations_handler_htmlrender extends views_handler_field {
     function render($values) {
-        watchdog("test", "1111");
+        watchdog("test", "handler");
         $value = $values->{$this->field_alias};
         return $value;
 
