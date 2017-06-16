@@ -69,8 +69,14 @@ function islandora_web_annotations_views_default_views() {
     $handler->display->display_options['fields']['annotation_value']['table'] = 'islandora_solr';
     $handler->display->display_options['fields']['annotation_value']['field'] = 'annotation_value';
     $handler->display->display_options['fields']['annotation_value']['label'] = 'Annotation';
+    $handler->display->display_options['fields']['annotation_value']['exclude'] = TRUE;
     $handler->display->display_options['fields']['annotation_value']['element_label_colon'] = FALSE;
     $handler->display->display_options['fields']['annotation_value']['link_to_object'] = 0;
+    /* Field: Islandora Solr: Render html field */
+    $handler->display->display_options['fields']['annotation_value_render']['id'] = 'annotation_value_render';
+    $handler->display->display_options['fields']['annotation_value_render']['table'] = 'islandora_solr';
+    $handler->display->display_options['fields']['annotation_value_render']['field'] = 'annotation_value_render';
+    $handler->display->display_options['fields']['annotation_value_render']['label'] = 'Annotation';
     /* Sort criterion: Islandora Solr: annotation_rangeTimeStart_sort */
     $handler->display->display_options['sorts']['annotation_rangeTimeStart_sort']['id'] = 'annotation_rangeTimeStart_sort';
     $handler->display->display_options['sorts']['annotation_rangeTimeStart_sort']['table'] = 'islandora_solr';
@@ -126,8 +132,15 @@ function islandora_web_annotations_views_default_views() {
     $handler->display->display_options['fields']['annotation_value']['table'] = 'islandora_solr';
     $handler->display->display_options['fields']['annotation_value']['field'] = 'annotation_value';
     $handler->display->display_options['fields']['annotation_value']['label'] = '';
+    $handler->display->display_options['fields']['annotation_value']['exclude'] = TRUE;
     $handler->display->display_options['fields']['annotation_value']['element_label_colon'] = FALSE;
     $handler->display->display_options['fields']['annotation_value']['link_to_object'] = 0;
+    /* Field: Islandora Solr: Render html field */
+    $handler->display->display_options['fields']['annotation_value_render']['id'] = 'annotation_value_render';
+    $handler->display->display_options['fields']['annotation_value_render']['table'] = 'islandora_solr';
+    $handler->display->display_options['fields']['annotation_value_render']['field'] = 'annotation_value_render';
+    $handler->display->display_options['fields']['annotation_value_render']['label'] = '';
+    $handler->display->display_options['fields']['annotation_value_render']['element_label_colon'] = FALSE;
     /* Sort criterion: Islandora Solr: fgs_createdDate_dt */
     $handler->display->display_options['sorts']['fgs_createdDate_dt']['id'] = 'fgs_createdDate_dt';
     $handler->display->display_options['sorts']['fgs_createdDate_dt']['table'] = 'islandora_solr';
