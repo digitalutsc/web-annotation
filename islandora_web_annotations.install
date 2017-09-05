@@ -25,6 +25,7 @@ function islandora_web_annotations_uninstall() {
     module_load_include('inc', 'islandora', 'includes/solution_packs');
     $variables = array(
       'islandora_web_annotations_verbose',
+      'islandora_web_annotations_namespace',
     );
     array_map('variable_del', $variables);
     islandora_install_solution_pack('islandora_web_annotations', 'uninstall');
