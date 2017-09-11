@@ -46,8 +46,9 @@ function islandora_web_annotations_admin(array $form, array &$form_state) {
   $form['islandora_web_annotations_namespace'] = array(
       '#type' => 'textfield',
       '#title' => t('Annotation Namespace'),
-      '#description' => t('Sets the namespace to use for annotation objects.  Defaults to \'annotation.\''),
-      '#default_value' => variable_get('islandora_web_annotations_namespace', 'annotation'),
+      '#description' => t('Please carefully select the namespace to use for annotation objects.'),
+      '#default_value' => variable_get('islandora_web_annotations_namespace'),
+      '#required' => TRUE,
   );
   $form['islandora_web_annotations_isannotationcontainerof_solr_field'] = array(
       '#type' => 'textfield',
